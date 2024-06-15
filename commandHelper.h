@@ -4,6 +4,9 @@
 #include <string_view>
 #include <string>
 
+/**
+ * @brief The commandHelper class - Класс разбора команд от клиента
+ */
 class commandHelper
 {
 public:

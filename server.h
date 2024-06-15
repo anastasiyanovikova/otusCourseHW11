@@ -31,6 +31,9 @@ public:
     std::string m_serverAnswer;
 };
 
+/**
+ * @brief The Server class - Сервер
+ */
 class Server {
 public:
     Server(asio::io_context &context, unsigned short port);

@@ -72,7 +72,7 @@ bool database::insert(std::string table, int key, std::string value, std::string
   auto it = m_tables.find(table);
   if(it == m_tables.end())
   {
-    errorMsg = "table not found";
+    errorMsg = "Таблица не найдена.";
     return false;
   }
 
@@ -84,7 +84,7 @@ bool database::truncate(std::string table, std::string& errorMsg)
   auto it = m_tables.find(table);
   if(it == m_tables.end())
   {
-    errorMsg = "table not found";
+    errorMsg = "Таблица не найдена.";
     return false;
   }
   return it->second.truncate();
@@ -94,7 +94,7 @@ bool database::intersection(std::string& errorMsg)
 {
   if(m_tables.size() < 2)
   {
-    errorMsg = "tables not found";
+    errorMsg = "Отсутствуют таблицы.";
     return false;
   }
   std::ostringstream result;
@@ -128,7 +128,7 @@ bool database::symmetric_difference(std::string& errorMsg)
 {
   if(m_tables.size() < 2)
   {
-    errorMsg = "tables not found";
+    errorMsg = "Отсутствуют таблицы.";
     return false;
   }
 
@@ -238,7 +238,7 @@ bool database::exec(std::string_view cmd, std::string& resultMsg)
   }
   else
   {
-    resultMsg = "ERR unknown command\n";
+    resultMsg = "ERR не найдена команда\n";
     return true;
   }
 }

@@ -5,6 +5,9 @@
 #include <mutex>
 #include <shared_mutex>
 
+/**
+ * @brief The table class - Класс таблица из БД
+ */
 class table
 {
 public: 
@@ -28,6 +31,9 @@ private:
     std::shared_mutex m_sharedMutex;
 };
 
+/**
+ * @brief The database class - Класс базы данных
+ */
 class database
 {
 public:
